@@ -1,0 +1,27 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    @font-face {
+        font-family: Roboto Mono;
+        font-display: swap;
+        src: url(/src/assets/RobotoMono.ttf);
+    }
+
+    :root {
+        --color-tile-light: 186 123 0;
+        --color-tile-dark: 240 218 177;
+
+        --color-text-light: 131 131 131;
+        --color-text-dark: 112 112 112;
+
+        --color-win: 86 255 86;
+        --color-loss: 255 86 86;
+        --color-draw: 128 128 128;
+
+        --color-bg-light: 48 48 54;
+        --color-bg-dark: 29 29 36;
+    }
+}
