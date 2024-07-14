@@ -7,6 +7,7 @@ export default {
         "src/**/*.ts",
         "src/**/*.jsx",
         "src/**/*.tsx",
+        "src/**/*.svg",
         "index.html",
     ],
     theme: {
