@@ -1,5 +1,5 @@
 import { JSX } from 'solid-js/jsx-runtime';
-import * as Icons from './icons';
+import * as Icons from './Icons';
 import './App.css';
 
 function Board() {
