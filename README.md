@@ -1,7 +1,7 @@
-# Tauri + Solid + Typescript
+# Chress Test
 
-This template should help get you started developing with Tauri, Solid and Typescript in Vite.
+A dead-simple testing framework for UCI-compatible engines
 
-## Recommended IDE Setup
+## WIP
 
-- [VS Code](https://code.visualstudio.com/) + [Tauri](https://marketplace.visualstudio.com/items?itemName=tauri-apps.tauri-vscode) + [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer)
+This project is incomplete and changes may happen to anything at anytime. You have been warned!
