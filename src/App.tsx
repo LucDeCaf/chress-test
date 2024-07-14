@@ -26,25 +26,29 @@ function Board() {
 }
 
 type ResultBarProps = {
-    variant: 'win' | 'loss' | 'draw';
+    variant: keyof ResultsProps;
     largest: number;
     count: number;
 };
 
 function ResultBar(props: ResultBarProps) {
     let text = '';
+    let color = '';
 
     switch (props.variant) {
-        case 'win':
+        case 'wins':
             text = 'WINS';
+            color = 'bg-win';
             break;
 
-        case 'loss':
+        case 'losses':
             text = 'LOSSES';
+            color = 'bg-loss';
             break;
 
-        case 'draw':
+        case 'draws':
             text = 'DRAWS';
+            color = 'bg-draw';
             break;
         default:
             break;
@@ -59,8 +63,8 @@ function ResultBar(props: ResultBarProps) {
             <div>{text}</div>
             <div
                 class={
-                    'rounded-lg flex items-center pl-4 text-black min-w-20 h-12 bg-' +
-                    props.variant
+                    'rounded-lg flex items-center pl-4 text-black min-w-20 h-12 ' +
+                    color
                 }
                 style={{
                     width: `${adjustedWidth}px`,
@@ -83,9 +87,13 @@ function Results(props: ResultsProps) {
 
     return (
         <div class='flex flex-col w-full gap-12 p-12'>
-            <ResultBar largest={largest} count={props.wins} variant='win' />
-            <ResultBar largest={largest} count={props.losses} variant='loss' />
-            <ResultBar largest={largest} count={props.draws} variant='draw' />
+            <ResultBar largest={largest} count={props.wins} variant='wins' />
+            <ResultBar
+                largest={largest}
+                count={props.losses}
+                variant='losses'
+            />
+            <ResultBar largest={largest} count={props.draws} variant='draws' />
         </div>
     );
 }
